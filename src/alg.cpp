@@ -33,4 +33,5 @@ int cbinsearch(int *arr, int size, int value) {
       else
         i = mid + 1;
   }
+  return ind1-ind2;
 }
