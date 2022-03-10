@@ -16,10 +16,11 @@ int cbinsearch(int *arr, int size, int value) {
       if (arr[mid] == value && arr[mid + 1] != value) {
           ind1 = mid+1;
           break;
-      } else if (arr[mid] <= value)
+      } else if (arr[mid] <= value) {
           i = mid + 1;
-        else
+      } else {
           j = mid;
+      }
   }
 
   i = 0, j = size - 1;
@@ -28,10 +29,11 @@ int cbinsearch(int *arr, int size, int value) {
     if (arr[mid] == value && arr[mid - 1] != value) {
         ind2 = mid;
         break;
-    } else if (arr[mid] >= value)
+    } else if (arr[mid] >= value) {
         j = mid;
-      else
+    } else {
         i = mid + 1;
+    }
   }
   return ind1-ind2;
 }
